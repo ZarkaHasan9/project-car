@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>{{title }}</title>
+        <style>
+            .main{
+                width:1000px;
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        {% comment %} <div class="main">{{bdata}} {{title}}</h1></div> {% endcomment %}
+         {% comment %} {% for n in clist %}
+         <div>{{forloop.revcounter0 }}{{n}}</div>
+         {%endfor%} {% endcomment %}
+         {% for n in clist %}
+         <div>{{forloop.last }}{{n}}</div>
+         {%endfor%}
+         <table border="1" cellpadding="10">
+            <tr>
+                <td>Name</td>
+                <td>Phone Number</td>
+            </tr>
+            {% for d in student_details %}
+            <tr> 
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+         {%for n in numbers %}
+           {% if n > 20 %}
+            <div>{{n}}</div>
+           {% endif  %}
+        {% endfor %}
+    </body>
+</html>

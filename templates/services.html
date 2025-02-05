@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{%block content %}
+<section class="section__container service__container" id="service">
+    <div class="service__image">
+      <img src="/static/assets/services.png" alt="service" />
+    </div>
+    <div class="service__content">
+      <p class="section__subheader">BEST SERVICES</p>
+      <h2 class="section__header">
+        Feel the best experience with our rental deals
+      </h2>
+      <ul class="service__list">
+        {% for n in servicesData %}
+        <li>
+          <span><i class="{{n.service_icon}}"></i></span>
+          <div>
+            <h4>{{n.service_title}}</h4>
+            <p>
+               {{n.service_des}}
+            </p>
+          </div>
+        </li>
+        {% endfor %}
+        <!-- <li>
+          <span><i class="ri-wallet-fill"></i></span>
+          <div>
+            <h4>Best price guarantee</h4>
+            <p>
+              We ensure you get competitive rates in the market, so you can
+              book with confidence knowing you're getting the best deal.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span><i class="ri-customer-service-fill"></i></span>
+          <div>
+            <h4>Support 24/7</h4>
+            <p>
+              Our dedicated team is available 24/7 to assist you with any
+              questions or concerns, ensuring a smooth rental experience.
+            </p>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </section>
+
+
+{%endblock%}
