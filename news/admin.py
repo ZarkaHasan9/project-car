@@ -5,3 +5,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display=('news_title','news_desc')
 admin.site.register(News,NewsAdmin)
 # Register your models here.
+
+
+
+#yoyo
